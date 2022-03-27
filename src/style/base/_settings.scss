@@ -1,0 +1,61 @@
+// color
+
+$black: #000000;
+$off-black: lighten($black, 8%);
+$offer-black: lighten($black, 12%);
+$gray: lighten($black, 30%);
+$light-gray: #666666;
+$lighter-gray: #b8b8b8;
+$very-light-gray: #e0e0e0;
+$off-white: #f7f7f7;
+$white: #fff;
+
+$color-primary: #51586E;
+$color-secondary: #DBC381;
+$color-tertiary: #8CA3BF;
+$color-accent: #DBCF45;
+$color-cream: #FAF7F1;
+
+$DARK-PERCENTAGE: 70%;
+$DARKER-PERCENTAGE: 50%;
+
+$color-primary-dark: rgba($color-primary, $DARK-PERCENTAGE);
+$color-secondary-dark: rgba($color-secondary, $DARK-PERCENTAGE);
+$color-tertiary-dark: rgba($color-tertiary, $DARK-PERCENTAGE);
+
+$color-primary-darker: rgba($color-primary, $DARKER-PERCENTAGE);
+$color-secondary-darker: rgba($color-secondary, $DARKER-PERCENTAGE);
+$color-tertiary-darker: rgba($color-tertiary, $DARKER-PERCENTAGE);
+
+// brand color
+$color-excel: #1D6F42;
+$color-pdf: #B0302B;
+
+$color-excel-dark: rgba($color-excel, $DARK-PERCENTAGE);
+$color-pdf-dark: rgba($color-pdf, $DARK-PERCENTAGE);
+
+$color-excel-darker: rgba($color-excel, $DARKER-PERCENTAGE);
+$color-pdf-darker: rgba($color-pdf, $DARKER-PERCENTAGE);
+
+// font sizes
+
+$font-size-xl: 2.3rem;
+$font-size-lg: 2rem;
+$font-size-md: 1.8rem;
+$font-size-sm: 1.6rem;
+$font-size-xs: 1.2rem;
+
+// spacing
+
+$size-xs: .7rem;
+$size-s: 1.2rem;
+$size-m: 1.6rem;
+$size-ml: 2.5rem;
+$size-l: 3.2rem;
+$size-xl: 4.8rem;
+
+// box shadow
+
+$shadow-light: 0 0 $size-xs rgba($off-black, .1);
+$shadow-input: 0 0 4px 2px rgba($color-secondary, .3);
+$shadow-input-dark: 0 0 4px 2px rgba($black, .3);

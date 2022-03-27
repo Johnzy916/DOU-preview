@@ -1,0 +1,29 @@
+.shortcuts-container {
+    width: 100%;
+    padding: $size-l;
+}
+
+.shortcut-items-container {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+}
+
+.shortcut-text,
+.snippet-text {
+    padding: $size-xs;
+    background-color: lighten($color-cream, 1.5%);
+    margin: 3px;
+    border-radius: 5px;
+}
+
+.shortcut-text,
+.snippet-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.snippet-header,
+.shortcut-header {
+    color: darken($color-cream, 15%);
+}

@@ -1,0 +1,304 @@
+body.dark {
+    // basic background and text
+    background-color: $black;
+    color: $lighter-gray;
+
+    ::selection {
+        background-color: rgba(lighten($color-primary, 10%), .5);
+        color: $off-white;
+    }
+
+    // scroll bar
+    &::-webkit-scrollbar-thumb {
+        background: $color-secondary-dark;
+      }
+
+    // header
+    & .app-header {
+        background-color: $off-black;
+
+        & a.navlink-active {
+            background-color: $color-primary-dark;
+            color: $very-light-gray !important;
+        }
+
+        & a:not(.navlink-active):hover {
+            color: $very-light-gray !important;
+        }
+    }
+
+    // all containers
+    & .data-form,
+    & .rates-container,
+    & .calendar-container,
+    & .ql-editor {
+        background-color: $off-black;
+    }
+
+    // notes page
+    & .editor-container {
+        & .ql-toolbar {
+            background-color: $offer-black;
+        }
+
+        // remove default borders
+        & .ql-toolbar.ql-snow {
+            border-bottom: 3px solid $black !important;
+        }
+
+        // shortcuts banner
+        .ql-view {
+            span {
+                color: $color-tertiary-dark;
+            }
+        }
+    }
+
+    // shortcuts container
+    & .shortcuts-container {
+        background-color: $off-black;
+
+        .shortcut-text,
+        .snippet-text {
+            background-color: $offer-black;
+        }
+
+        .snippet-header,
+        .shortcut-header {
+            color: $color-secondary-darker;
+        }
+    }
+
+    // calendar page
+    & .calendar-container {
+        & .fc-daygrid * {
+            border: none !important;
+        }
+
+        & .fc-toolbar {
+            .fc-aButton-button,
+            .fc-bButton-button,
+            .fc-prev-button,
+            .fc-next-button {
+                background-color: $color-primary-dark !important;
+                border: 1px solid $black !important;
+                color: $very-light-gray;
+
+                &:hover {
+                    background-color: $color-primary-darker !important;
+                }
+            }
+
+            .fc-oddButton-button,
+            .fc-evenButton-button {
+                background-color: $color-secondary-dark !important;
+                border: 1px solid $black !important;
+                color: $very-light-gray;
+
+                &:hover {
+                    background-color: $color-secondary-darker !important;
+                }
+            }
+
+            .active--recycle {
+                background-color: $color-primary-darker !important;
+            }
+
+            .active--watering {
+                background-color: $color-secondary-darker !important;
+            }
+        }
+
+        & .fc-scrollgrid {
+            border: 3px solid $black;
+            & .fc-col-header-cell {
+                background-color: $black;
+                border: 3px solid $black !important;
+            }
+        }
+
+        & .fc-scroller-harness {
+            background-color: $off-black;
+        }
+
+        & .fc-daygrid-day {
+            border: 3px solid $black !important;
+        }
+
+        & .fc-day-today {
+            background-color: $color-tertiary-darker !important;
+        }
+    }
+
+    // rates page
+    & .rates-container {
+        // dropdown overrides
+        & .Dropdown-control {
+            background-color: $offer-black;
+            color: $very-light-gray;
+            border-color: transparent;
+        }
+
+        & .Dropdown-menu {
+            background-color: $off-black;
+            border-color: $offer-black;
+
+            .Dropdown-option {
+                color: $very-light-gray;
+            }
+
+            .Dropdown-option:hover,
+            .is-selected {
+                background-color: $offer-black;
+            }
+        }
+
+        // every other rate container
+        & section:nth-child(odd) {
+            background-color: $offer-black;
+
+            & .Dropdown-control {
+                background-color: $off-black;
+            }
+        }
+
+        & .tooltip .tooltip-text {
+            background-color: darken($color-primary, 10%);
+        }
+
+        & .rate-title {
+            color: $very-light-gray;
+        }
+
+        & .rate-amount {
+            color: $color-tertiary-dark;
+        }
+    }
+
+    // easyXLS page
+    & .data-form {
+        & input,
+        & textarea {
+            background-color: $offer-black;
+            border-color: transparent;
+            color: $lighter-gray;
+            transition: box-shadow .2s ease-out;
+
+            &:focus {
+                box-shadow: $shadow-input-dark;
+            }
+
+            &::placeholder {
+                color: $gray;
+            }
+        }
+
+        // checkboxes
+        & #checkbox-container {
+            input[type="checkbox"] {
+                // disabled checkbox
+                &:disabled {
+                    border: 1px solid $offer-black;
+                    cursor: default;
+                }
+
+                // checked color
+                &:checked {
+                    background: $color-primary-dark;
+                }
+            }
+        }
+
+        // disabled checkbox label
+        & #checkbox-container input[type="checkbox"]:disabled + label {
+            color: $offer-black;
+            cursor: default;
+        }
+
+        // buttons
+        & .button-container {
+            button {
+                color: $very-light-gray;
+            }
+
+            .btn-clear {
+                background-color: $offer-black;
+                border-color: $offer-black;
+                color: $very-light-gray;
+
+                &:hover {
+                    background-color: $off-black;
+                    border-color: $gray;
+                }
+            }
+
+            .btn-secondary {
+                background-color: $color-secondary-dark;
+                &:hover {
+                    background-color: $color-secondary-darker;
+                }
+            }
+
+            .btn-pdf {
+                background-color: $color-pdf-dark;
+                &:hover {
+                    background-color: $color-pdf-darker;
+                }
+            }
+
+            .btn-excel {
+                background-color: $color-excel-dark;
+                &:hover {
+                    background-color: $color-excel-darker;
+                }
+            }
+        }
+    }
+
+    .output-container,
+    .table-container {
+        background-color: $off-black;
+    }
+
+    // notification override
+    .notification {
+        box-shadow: $shadow-input-dark !important;
+        opacity: 1 !important;
+    
+        &-info {
+            background-color: darken($color-primary, 10%) !important;
+        }
+        &-warning {
+            background-color: #B5A16B !important;
+        }
+        &-success {
+            background-color: darken($color-excel, 10%) !important;
+        }
+    }
+
+    // data table
+    & .output-table {
+        border: 2px solid $black;
+    }
+    & .thead__year {
+        background-color: $color-primary-darker;
+        color: $very-light-gray;
+    }
+    
+    & .thead__headers {
+        background-color: $color-tertiary-darker;
+        color: $very-light-gray;
+    }
+
+    & .tbody__row:nth-child(even) {
+        background-color: $offer-black;
+    }
+    
+    & .tbody__row:nth-child(odd) {
+        background-color: $off-black;
+    }
+    
+    & .tbody__totals {
+        background-color: $black;
+    }
+}

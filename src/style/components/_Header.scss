@@ -1,0 +1,84 @@
+.app-header {
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $size-xs;
+    box-shadow: $shadow-light;
+    position: relative;
+}
+
+.app-header a {
+    color: $color-primary;
+    margin: 0 $size-m;
+    padding: $size-xs $size-s;
+    text-decoration: none;
+    transition: all .2s ease-out;
+}
+
+.app-header a:not(.navlink-active):hover {
+    background-color: rgba($color-primary, .5);
+    color: $white;
+}
+
+.navlink-active {
+    background-color: $color-primary;
+    color: $white !important;
+}
+
+// toggle overrides
+
+.dark-mode-toggle > * {
+    box-shadow: none !important;
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+
+    @include media(sm-phone) {
+        display: none;
+    }
+
+
+    // when not checked (on left side)
+    .react-toggle-track {
+        background-color: $color-primary-dark;
+    }
+    .react-toggle-thumb {
+        border-color: $color-primary-dark;
+    }
+
+    &:hover .react-toggle-track {
+        background-color: $color-primary-darker !important;
+    }
+    &:hover .react-toggle-thumb {
+        border-color: $color-primary-darker !important;
+    }
+
+    // when checked (on right side)
+    &.react-toggle--checked {
+        .react-toggle-track {
+            background-color: $color-secondary;
+            transition: all 200ms;
+        }
+        .react-toggle-thumb {
+            border-color: $color-secondary;
+            transition: all 200ms;
+        }
+
+        &:hover .react-toggle-track {
+            background-color: darken($color-secondary, 7%) !important;
+        }
+        &:hover .react-toggle-thumb {
+            border-color: darken($color-secondary, 7%) !important;
+        }
+    }
+
+    & .react-toggle-track-check,
+    & .react-toggle-track-x {
+        height: 16px;
+        width: 12px;
+    }
+}

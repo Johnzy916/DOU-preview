@@ -1,0 +1,96 @@
+{
+    "snippets": [
+        {
+            "shortcut": ".start",
+            "text": "called because they bought the property. Verified new PO name/number and went over OC process. Advised to wait for welcome letter and first bill."
+        },
+        {
+            "shortcut": ".stop",
+            "text": "called because they sold the property. Verified M/A and went over OC process. Advised to disregard bills outside of ownership and wait for final bill."
+        },
+        {
+            "shortcut": ".free",
+            "text": "called to schedule a FREE junk pickup. Transferred to Service Center."
+        },
+        {
+            "shortcut": ".paid",
+            "text": "requested a PAID BWP for HHJ. [Prepaid/Unpaid] Please add charge of $34.84 to this account."
+        },
+        {
+            "shortcut": ".tpaid",
+            "text": "requested a PAID BWP for HHJ. [Prepaid] Payment of $34.84 is on TENANT account: "
+        },
+        {
+            "shortcut": ".can",
+            "text": "called to get their can serviced. Transferred to Service Center."
+        },
+        {
+            "shortcut": ".lien",
+            "text": "requested lien release. Verified liens and status. Released:\n[BOOK/PAGE NUMBERS]"
+        },
+        {
+            "shortcut": ".pay",
+            "text": "expresspay@cityofsacramento.org"
+        },
+        {
+            "shortcut": ".copy",
+            "text": "requested a copy of their bill be emailed to them. Confirmed dates and emailed copies to [EMAIL ADDRESS]."
+        },
+        {
+            "shortcut": ".email",
+            "text": "Dear Customer,\n\nThank you for contacting the City of Sacramento, Department of Utilities.\n\nAttached are the utility bills you have requested.\n\nIf you have any questions, please contact Customer Service at 916-808-5454.\n\nThank You,\n\nCustomer Service\nDepartment of Utilities\nCity of Sacramento\n\nNOTE:  This e-mail is intended for the sole use of the intended recipient.  If you are not the intended recipient, or the employee or agent responsible for delivering this message to the intended recipient, or have received this communication in error, please immediately notify us by reply e-mail or by telephone at (916) 808-5454, and delete the original transmission from your system without reading, copying, or saving it in any manner."
+        },
+        {
+            "shortcut": ".nobill",
+            "text": "called because they havent received the bill. Advised that the meter has become active and the billing cycle was adjusted. Explained that the amount may be higher on this bill because of the additional days."
+        },
+        {
+            "shortcut": ".meter",
+            "text": "called because their bill is higher than usual. Advised that the meter has become active and the billing cycle was adjusted. The bill includes more days and will go back to 30 days next cycle."
+        },
+        {
+            "shortcut": ".tadd",
+            "text": "called to add themselves to the account. Advised that the PO would need to request a Bill Tenant form so they could be added as a courtesy."
+        },
+        {
+            "shortcut": ".unlock",
+            "text": "called because their account is locked. Verified caller and unlocked account."
+        },
+        {
+            "shortcut": ".pass",
+            "text": "called because their account is locked. Verified caller and username. Provided temporary password and advised to change it when able to log in."
+        },
+        {
+            "shortcut": ".sq",
+            "text": "called because their account is locked. Verified caller and reset security questions. Advised to set up new security questions."
+        },
+        {
+            "shortcut": ".refund",
+            "text": "requested a refund.\n[CUSTOMER NAME]\n[PHONE NUMBER]\nRefund: $[AMOUNT]\nPayment(s): [PAYMENTS]\n[MAILING ADDRESS]"
+        },
+        {
+            "shortcut": ".rpa",
+            "text": "[1ST/2ND] PA -- PA set up for balance of $[BALANCE] @ $[MONTHLY AMOUNT] / [#] MONTHS on top of the current charges. Explained that they'll receive a letter with T&Cs and went over guidelines."
+        },
+        {
+            "shortcut": ".tdpa",
+            "text": "[PA #] PA -- After $[PAYMENT AMOUNT] has posted, please set up PA for remaining balance of $[BALANCE] @ $[MONTHLY AMOUNT] / [#] MONTHS on top of the current charges. Explained that they'll receive a letter with T&Cs and went over guidelines."
+        },
+        {
+            "shortcut": ".fpa",
+            "text": "is requesting 3rd PA\nTotal Balance of $[BALANCE]\n1st PA defaulted after [# OF PAYMENTS] payments\n2nd PA defaulted after [# OF PAYMENTS] payments\nThey can pay $[DOWN PAYMENT]. Customer requesting [# MONTHS] MONTH PA on remaining balance of $[REMAINING BALANCE]. Went over PA terms and advised that this would be the final PA, if approved."
+        },
+        {
+            "shortcut": ".macall",
+            "text": "requested M/A update. Verified address and changed M/A from [OLD ADDRESS] to [NEW ADDRESS]."
+        },
+        {
+            "shortcut": ".maday",
+            "text": "Received returned mail w/ yellow sticker with message 'Unable to forward.'  Researched in PV and CCB with no success. Shredded.\n[ADDRESS]\n\nReceived returned mail w/ yellow sticker and message. Account already closed. Shredded.\n[ADDRESS]\n\nReceived returned mail with yellow sticker and message 'Unable to forward.' Address already updated in the system. Shredded.\n[ADDRESS]\n\nReceived returned mail with yellow sticker 'Unable to forward.' Found alternate address. Changed M/A from [OLD ADDRESS] to [NEW ADDRESS]. Shredded.\n\nReceived returned mail with yellow sticker and updated address. Changed M/A from [OLD ADDRESS] to [NEW ADDRESS]. Forwarded to new address.\n\nReceived returned mail w/ yellow sticker. Mail was addressed to a Tenant on account. Removed [TENANT NAME] (Person ID: [PERSON ID])\n\nReceived returned mail w/ yellow sticker with message 'Unable to forward.' Several missed payments. Changed M/A to property address in hopes of reaching PO. Shredded.\n[ADDRESS]\n\nReceived returned mail w/ yellow sticker with message 'Temporarily away.' Resent.\n[ADDRESS]"
+        },
+        {
+            "shortcut": ".cash",
+            "text": "Processed check from DROP BOX\nfor the amount of $\n\nProcessed TITLE CHECK from [COMPANY]\nfor the amount of $\n\nProcessed check\nfor the amount of $\n\nProcessed CC payment rcvd via phone\nfor the amount of $\n\nProcessed check for multiple accounts\nfor the amount of $\nwith this account receiving $"
+        }
+    ]
+}

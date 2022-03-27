@@ -1,0 +1,77 @@
+.calendar-content {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.calendar-container {
+    background-color: $white;
+    padding: $size-l;
+    box-shadow: $shadow-light;
+    width: 80%;
+
+    @include media(phone) {
+        width: 100%;
+        padding: $size-m;
+    }
+}
+
+// calendar overrides
+
+.fc-toolbar-title {
+    font-size: $font-size-xl !important;
+}
+.fc-day-today {
+    background-color: rgba($color-tertiary, 80%) !important;
+}
+
+.fc-button {
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+// custom button overrides
+
+// make dark buttons the primary color
+.fc-aButton-button,
+.fc-bButton-button,
+.fc-prev-button,
+.fc-next-button {
+    background-color: $color-primary !important;
+    border: 1px solid $white !important;
+
+    &:hover {
+        background-color: darken($color-primary, 10%) !important;
+    }
+}
+// make watering day buttons secondary color
+.fc-oddButton-button,
+.fc-evenButton-button {
+    background-color: $color-secondary !important;
+    border: 1px solid $white !important;
+
+    &:hover {
+        background-color: darken($color-secondary, 10%) !important;
+    }
+}
+
+// custom selection buttons for smaller sized screen
+.fc-header-toolbar > .fc-toolbar-chunk:nth-child(2) {
+    @include media(phone) {
+        display: flex;
+        flex-flow: column nowrap;
+
+        & > div:nth-child(2) {
+            margin: $size-xs 0 0 0 !important;
+        }
+    }
+}
+
+.active--recycle {
+    background-color: darken($color-primary, 10%) !important;
+}
+
+.active--watering {
+    background-color: darken($color-secondary, 10%) !important;
+}

@@ -1,0 +1,43 @@
+.output-table {
+    text-align: center;
+    border: 1px solid $very-light-gray;
+    border-collapse: collapse;
+
+    td,
+    th {
+        padding: $size-xs $size-s;
+    }
+}
+
+// if payoff is included, shrink text to fit table
+.adjust-table-sizes {
+    font-size: $font-size-sm;
+    padding: $size-xs $size-xs;
+}
+
+// keep date from wrapping
+.date-cell {
+    white-space: nowrap;
+}
+
+.thead__year {
+    background-color: $color-primary;
+    color: white;
+}
+
+.thead__headers {
+    background-color: $color-tertiary;
+    color: white;
+}
+
+.tbody__row:nth-child(even) {
+    background-color: $off-white;
+}
+
+.tbody__row:nth-child(odd) {
+    background-color: white;
+}
+
+.tbody__totals {
+    background-color: $very-light-gray;
+}
