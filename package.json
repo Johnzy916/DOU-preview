@@ -6,7 +6,7 @@
     "start": "parcel ./src/index.html --open",
     "build": "parcel build ./src/index.html --public-url ./"
   },
-  "homepage": "https://angusdev.com/tools/dou",
+  "homepage": "https://github.com/Johnzy916/DOU-preview",
   "keywords": [],
   "author": "",
   "license": "ISC",
