@@ -7,6 +7,7 @@ import darkReducer from '../reducers/darkReducer';
 
 // initial state
 export const pdfInitialState = {
+    // for example purposes
     years: '',
     type: '',
     account: '',
