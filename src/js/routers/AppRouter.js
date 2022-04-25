@@ -33,7 +33,7 @@ export default function AppRouter() {
                         <Route path={`/projects/dou/xls`} element={<EasyXls />} />
                         <Route path={`/projects/dou/notes`} element={<Notes />} />
                         <Route path={`/projects/dou/rates`} element={<Rates />} />
-                        <Route path={`/projects/dou`} element={<Navigate replace to={`/notes`} />} />
+                        <Route path={`/projects/dou`} element={<Navigate replace to={`/projects/dou/notes`} />} />
                     </Routes>
                 </Suspense>
             </div>
