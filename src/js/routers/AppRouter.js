@@ -29,11 +29,11 @@ export default function AppRouter() {
             <div className="content-container">
                 <Suspense fallback={SuspenseFallback()}>
                     <Routes>
-                        <Route path={`/calendar`} element={<Calendar />} />
-                        <Route path={`/xls`} element={<EasyXls />} />
-                        <Route path={`/notes`} element={<Notes />} />
-                        <Route path={`/rates`} element={<Rates />} />
-                        <Route path={`/`} element={<Navigate replace to={`/notes`} />} />
+                        <Route path={`/projects/dou/calendar`} element={<Calendar />} />
+                        <Route path={`/projects/dou/xls`} element={<EasyXls />} />
+                        <Route path={`/projects/dou/notes`} element={<Notes />} />
+                        <Route path={`/projects/dou/rates`} element={<Rates />} />
+                        <Route path={`/projects/dou`} element={<Navigate replace to={`/notes`} />} />
                     </Routes>
                 </Suspense>
             </div>

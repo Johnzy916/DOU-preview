@@ -20,16 +20,16 @@ export default function Header() {
 
     return (
         <div className="app-header">
-            <NavLink to='/notes' className={({ isActive }) => isActive ? 'navlink-active' : ''}>
+            <NavLink to='/projects/dou/notes' className={({ isActive }) => isActive ? 'navlink-active' : ''}>
                 Notes
             </NavLink>
-            <NavLink to='/calendar' className={({ isActive }) => isActive ? 'navlink-active' : ''}>
+            <NavLink to='/projects/dou/calendar' className={({ isActive }) => isActive ? 'navlink-active' : ''}>
                 Calendar
             </NavLink>
-            <NavLink to='/rates' className={({ isActive }) => isActive ? 'navlink-active' : ''}>
+            <NavLink to='/projects/dou/rates' className={({ isActive }) => isActive ? 'navlink-active' : ''}>
                 Rates
             </NavLink>
-            <NavLink to='/xls' className={({ isActive }) => isActive ? 'navlink-active' : ''}>
+            <NavLink to='/projects/dou/xls' className={({ isActive }) => isActive ? 'navlink-active' : ''}>
                 EasyXLS
             </NavLink>
             <Toggle
