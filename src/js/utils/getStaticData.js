@@ -4,7 +4,7 @@ export default async (fileName, errorText, errorTitle) => {
     // get location origin to fetch whether dev or prod
     const origin = process.env.NODE_ENV == 'development'
         ? ''
-        : `${window.location.origin}/projects/dou`;
+        : `${window.location.origin}`;
 
     try {
         // get file, but append random param to prevent browser caching

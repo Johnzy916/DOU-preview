@@ -1,4 +1,4 @@
-export const testData = `This form is filled in with test data as an example.
+export const xlsPreview = `This form is filled in with test data as an example.
 In production, ugly tables of data are pasted here.
 Specific data is extracted and formatted for sending to customers.
 Output can be saved as PDF via print, or XLS spreadsheet.

@@ -3,11 +3,11 @@ import pdfReducer from '../reducers/pdfReducer';
 import calendarReducer from '../reducers/calendarReducer';
 import notesReducer from '../reducers/notesReducer';
 import ratesReducer from '../reducers/ratesReducer';
+import creditReducer from '../reducers/creditReducer';
 import darkReducer from '../reducers/darkReducer';
 
 // initial state
 export const pdfInitialState = {
-    // for example purposes
     years: '',
     type: '',
     account: '',
@@ -35,11 +35,41 @@ export const notesInitialState = {
     notesValue: '',
     showShortcuts: false,
     editorFontSize: 18,
-    snippets: []
+    snippets: [],
+    customSnippets: []
 }
 
 export const ratesInitialState = {
     rates: {}
+}
+
+export const creditInitialState = {
+    actualBalance: 0,
+    demand: {
+        demandDate: '',
+        lastBillDate: '',
+        meterDate: '',
+        daysSinceLastBill: 0,
+        daysSinceMeterBilled: 0,
+        totalCurrentlyDue: 0,
+        remainingCredit: 0,
+        finalCredit: 0,
+        waterFlat: 0,
+        waterMetered: 0,
+        irrigationFlat: 0,
+        irrigationMetered: 0,
+        wasteFlat: 0,
+        wasteMetered: 0,
+        finalPerDiem: 0,
+        finalProrated: 0,
+        finalDemandAmount: 0,
+        demandDateValue: '',
+        billDateValue: '',
+        saInputValue: '',
+        billInputValue: '',
+        balanceInputValue: '',
+        isShowingDemandInfo: false
+    }
 }
 
 export const darkInitialState = {
@@ -55,6 +85,7 @@ export const StateProvider = ({ children }) => {
     const [ calendarState, calendarDispatch ] = useReducer(calendarReducer, calendarInitialState);
     const [ notesState, notesDispatch ] = useReducer(notesReducer, notesInitialState);
     const [ ratesState, ratesDispatch ] = useReducer(ratesReducer, ratesInitialState);
+    const [ creditState, creditDispatch ] = useReducer(creditReducer, creditInitialState);
     const [ darkState, darkDispatch ] = useReducer(darkReducer, darkInitialState);
 
     const value = {
@@ -63,12 +94,14 @@ export const StateProvider = ({ children }) => {
             ...calendarState,
             ...notesState,
             ...ratesState,
+            ...creditState,
             ...darkState
         },
         pdfDispatch,
         calendarDispatch,
         notesDispatch,
         ratesDispatch,
+        creditDispatch,
         darkDispatch
     }
 

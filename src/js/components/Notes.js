@@ -56,8 +56,18 @@ export default function Notes() {
 
     // get and set snippets
     useEffect(async () => {
+      // static snippets
       const snippets = await getStaticData('snippets.json', 'Unable to load snippets', 'Please reload the page');
       notesDispatch({ type: 'SET_SNIPPETS', snippets });
+      // custom snippets
+      const customSnippets = localStorage.getItem('dou_custom_snippets');
+      // set snippets if there is some
+      if (customSnippets) {
+        notesDispatch({ 
+          type: 'SET_CUSTOM_SNIPPETS',
+          customSnippets: JSON.parse(customSnippets)
+        });
+      }
     }, []);
 
     // set module options for the editor toolbar
@@ -92,14 +102,14 @@ export default function Notes() {
           }}
         >
             <NotesToolbar editorRef={editorRef} />
-            { state.showShortcuts && <Shortcuts snippets={state.snippets} /> }
+            { state.showShortcuts && <Shortcuts snippets={state.snippets} customSnippets={state.customSnippets} /> }
             { !state.showShortcuts &&
               <ReactQuill 
                 value={state.notesValue}
                 onChange={(content, delta, source, editor) => {
                   return handleChange(content, delta, source, editor);
                 }}
-                onKeyUp={(e) => trackTyping(e, editorRef, state.snippets)}
+                onKeyUp={(e) => trackTyping(e, editorRef, state.snippets, state.customSnippets)}
                 onKeyDown={(e) => formatPhoneNumber(e, editorRef)}
                 theme='snow'
                 modules={modules}

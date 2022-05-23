@@ -58,6 +58,11 @@ body.dark {
     & .shortcuts-container {
         background-color: $off-black;
 
+        .snippets-header {
+            border: solid $color-secondary-darker;
+            color: $color-secondary-darker;
+        }
+
         .shortcut-text,
         .snippet-text {
             background-color: $offer-black;
@@ -66,6 +71,50 @@ body.dark {
         .snippet-header,
         .shortcut-header {
             color: $color-secondary-darker;
+        }
+
+        .no-snippets-message {
+            background: $offer-black;
+        }
+
+        .custom-shortcuts-container {
+            background-color: $off-black;
+        }
+
+        .remove-button-container {
+            background: $offer-black;
+        }
+
+        .remove-button {
+            background-color: $offer-black;
+            color: $off-black;
+        }
+
+
+        .remove-button:hover {
+            background: $color-secondary-darker !important;
+        }
+
+        .add-shortcut-container {
+            background: $color-primary-dark;
+        }
+
+        .add-shortcut,
+        .add-text {
+            background: $off-black;
+        }
+
+        .add-shortcut:focus,
+        .add-text:focus {
+            outline: 3px solid $color-tertiary-dark;
+        }
+
+        .add-button {
+            background: $color-tertiary-dark;
+        }
+
+        .add-button:hover {
+            background: $color-tertiary-darker;
         }
     }
 
@@ -175,6 +224,96 @@ body.dark {
         }
     }
 
+    // cwwapp page
+    & .credit-container,
+    & .demand-container {
+        background-color: $off-black;
+
+        input,
+        textarea {
+            background-color: $offer-black;
+            border-color: transparent;
+            color: $lighter-gray;
+            transition: box-shadow .2s ease-out;
+
+            &:focus {
+                box-shadow: $shadow-input-dark;
+            }
+
+            &::placeholder {
+                color: $gray;
+            }
+        }
+
+        // buttons
+        & .quick-balance-footer,
+        & .manual-demand-footer {
+            button {
+                color: $very-light-gray;
+            }
+
+            .btn-clear {
+                background-color: $offer-black;
+                border-color: $offer-black;
+                color: $very-light-gray;
+
+                &:hover {
+                    background-color: $off-black;
+                    border-color: $gray;
+                }
+            }
+
+            .btn-secondary {
+                background-color: $color-secondary-dark;
+                &:hover {
+                    background-color: $color-secondary-darker;
+                }
+            }
+
+            .demand-amounts div,
+            div.amount-due {
+                background: $color-tertiary-dark;
+                color: $very-light-gray;
+            }
+        }
+
+        button.accordion {
+            background: $color-primary-dark;
+            color: $very-light-gray;
+
+            &.active,
+            &:hover {
+                background-color: $color-primary-darker;
+            }
+        }
+
+        .demand-explanation {
+            h4 {
+                color: $gray;
+            }
+
+            div {
+                border: 1px solid $black;
+            }
+        }
+    }
+
+    // notification override
+    .notification {
+        box-shadow: $shadow-input-dark !important;
+        opacity: 1 !important;
+
+        &-info {
+            background-color: darken($color-primary, 10%) !important;
+        }
+        &-warning {
+            background-color: #B5A16B !important;
+        }
+        &-success {
+            background-color: darken($color-excel, 10%) !important;
+        }
+    }
+
     // easyXLS page
     & .data-form {
         & input,
@@ -264,7 +403,7 @@ body.dark {
     .notification {
         box-shadow: $shadow-input-dark !important;
         opacity: 1 !important;
-    
+
         &-info {
             background-color: darken($color-primary, 10%) !important;
         }
@@ -284,7 +423,7 @@ body.dark {
         background-color: $color-primary-darker;
         color: $very-light-gray;
     }
-    
+
     & .thead__headers {
         background-color: $color-tertiary-darker;
         color: $very-light-gray;
@@ -293,11 +432,11 @@ body.dark {
     & .tbody__row:nth-child(even) {
         background-color: $offer-black;
     }
-    
+
     & .tbody__row:nth-child(odd) {
         background-color: $off-black;
     }
-    
+
     & .tbody__totals {
         background-color: $black;
     }

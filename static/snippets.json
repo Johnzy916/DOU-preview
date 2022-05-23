@@ -5,32 +5,32 @@
             "text": "type the shortcut on the left into the Notes section. This is a preview version of the site and only includes example snippets."
         },
         {
-            "shortcut": ".start",
-            "text": "called because they bought the property. Verified new name/number and went over the owner change process."
+            "shortcut": ".sorry",
+            "text": "I’m very sorry, but fulfilling that request isn’t possible at this time. Let me check and see what I can do for you."
         },
         {
-            "shortcut": ".stop",
-            "text": "called because they sold the property. Verified M/A and went over the owner change process."
+            "shortcut": ".intro",
+            "text": "I hope you won’t mind that I keep a transcript of our conversation. It will be used for training purposes and quality assurance."
         },
         {
-            "shortcut": ".copy",
-            "text": "requested a copy of their bill be emailed to them. Confirmed dates and emailed copies to [EMAIL ADDRESS]."
+            "shortcut": ".contact",
+            "text": "Would you like to leave me your contact information, so one of our customer success managers could reach out to you?"
         },
         {
-            "shortcut": ".unlock",
-            "text": "called because their account is locked. Verified caller and unlocked account."
+            "shortcut": ".transfer",
+            "text": "Is it okay if I transfer you to another department? They have a better understanding of the problem you are facing. I’m sorry for the inconvenience."
         },
         {
-            "shortcut": ".pass",
-            "text": "called because their account is locked. Verified caller and username. Provided temporary password and advised to change it when able to log in."
+            "shortcut": ".hold",
+            "text": "Can you please hold for a moment while I review the information you have provided? I’ll be right with you."
         },
         {
-            "shortcut": ".sq",
-            "text": "called because their account is locked. Verified caller and reset security questions. Advised to set up new security questions."
+            "shortcut": ".thanks",
+            "text": "Thank you for waiting. What can I do for you today?"
         },
         {
-            "shortcut": ".refund",
-            "text": "requested a refund.\n[CUSTOMER NAME]\n[PHONE NUMBER]\nRefund: $[AMOUNT]\nPayment: [PAYMENT]\n[MAILING ADDRESS]"
+            "shortcut": ".account",
+            "text": "Can you please give me your account number so I can look up your information?"
         }
     ]
 }

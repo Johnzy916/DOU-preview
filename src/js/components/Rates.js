@@ -194,6 +194,13 @@ export default function Rates() {
                 </span>
                 <span className="rate-amount">{ `$${ywTotal.toFixed(2)}` }</span>
             </section>
+            <section>
+                <span className="rate-title">Food Waste Only</span>
+                <span className="rate-additional">
+                    Any size container
+                </span>
+                <span className="rate-amount">{ `$${rates.food_only?.toFixed(2)}` }</span>
+            </section>
         </div>
     )
 }

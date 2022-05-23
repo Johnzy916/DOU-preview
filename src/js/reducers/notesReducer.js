@@ -14,6 +14,32 @@ export default (state, action) => {
                 ...state,
                 snippets: action.snippets
             }
+        case 'SET_CUSTOM_SNIPPETS':
+            return {
+                ...state,
+                customSnippets: action.customSnippets
+            }
+        case 'SET_SNIPPET':
+            return {
+                ...state,
+                customSnippets: {
+                    snippets: [
+                        ...(state.customSnippets?.snippets || []),
+                        action.snippet
+                    ]
+                }
+            }
+        case 'REMOVE_SNIPPET':
+            return {
+                ...state,
+                customSnippets: {
+                    snippets: [
+                        ...state.customSnippets?.snippets?.filter(snippet => {
+                            return snippet.shortcut !== action.shortcut
+                        })
+                    ]
+                }
+            }
         case 'TOGGLE_SHOW_SHORTCUTS':
             return {
                 ...state,

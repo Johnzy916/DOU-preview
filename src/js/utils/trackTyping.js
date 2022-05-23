@@ -4,7 +4,7 @@ export let typeArray = [];  // what's typed
 export let typingTimer;      // time between keypresses
 export let typingTimeout = 750;      // Delay before array cleared
 
-export const trackTyping = (e, editorRef, snippets) => {
+export const trackTyping = (e, editorRef, snippets, customSnippets) => {
 
    var key = e.key; // key pressed
 
@@ -33,7 +33,7 @@ export const trackTyping = (e, editorRef, snippets) => {
     typeArray.push(key)
 
     // Check typed text for shortcuts
-    checkShortcuts(typeArray.join(''), editorRef, snippets);
+    checkShortcuts(typeArray.join(''), editorRef, snippets, customSnippets);
   }
 }
 

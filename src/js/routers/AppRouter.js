@@ -4,12 +4,14 @@ import { NotificationContainer } from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 import { StateContext } from '../context/StateContext';
 import Header from '../components/Header';
+import NotFound from '../components/NotFound';
 import icons from '../icons/icons';
 // lazy load the main components
 const Calendar = lazy(() => import('../components/Calendar'));
 const EasyXls = lazy(() => import('../components/EasyXls'));
 const Notes = lazy(() => import('../components/Notes'));
 const Rates = lazy(() => import('../components/Rates'));
+const Credit = lazy(() => import('../components/Credit'));
 
 // fallback for loading components lazily
 const SuspenseFallback = () => (
@@ -22,7 +24,6 @@ export default function AppRouter() {
     const { state } = useContext(StateContext)
 
     return (
-        // basename of the server subdirectory
         <Router>
             <Header />
             <NotificationContainer />
@@ -33,7 +34,9 @@ export default function AppRouter() {
                         <Route path={`/projects/dou/xls`} element={<EasyXls />} />
                         <Route path={`/projects/dou/notes`} element={<Notes />} />
                         <Route path={`/projects/dou/rates`} element={<Rates />} />
-                        <Route path={`/projects/dou`} element={<Navigate replace to={`/projects/dou/notes`} />} />
+                        <Route path={`/projects/dou/credit`} element={<Credit />} />
+                        <Route path={`/projects/dou/*`} element={<NotFound />} />
+                        <Route path={`/projects/dou/`} element={<Navigate replace to={`/projects/dou/notes`} />} />
                     </Routes>
                 </Suspense>
             </div>

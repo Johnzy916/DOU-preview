@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useEffect } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
 import icons from '../icons/icons';
 import { StateContext } from '../context/StateContext';
@@ -6,7 +6,7 @@ import parseTableData from '../utils/parseTableData';
 import { parseInputData } from '../utils/parseInputData';
 import OutputContainer from './OutputContainer';
 import { createXlsx } from '../utils/createXlsx';
-import { testData } from '../../fixtures/data';
+import { xlsPreview } from '../../fixtures/xlsPreview';
 
 export default function EasyXls() {
     // access state and dispatch
@@ -26,7 +26,7 @@ export default function EasyXls() {
         pdfDispatch({ type: 'SET_ACCOUNT', value: '0123456789' });
         pdfDispatch({ type: 'SET_OWNER', value: 'Test Customer' });
         pdfDispatch({ type: 'SET_ADDRESS', value: '4321 Imagine Ave' });
-        pdfDispatch({ type: 'SET_DATA_INPUT', value: testData });
+        pdfDispatch({ type: 'SET_DATA_INPUT', value: xlsPreview });
     }, []);
 
     // handle create or print pdf table
@@ -140,7 +140,7 @@ export default function EasyXls() {
             <textarea 
                 id="info-input" 
                 className="full-width" 
-                placeholder="Paste data table..."
+                placeholder="Paste payment/bill table..."
                 value={state.dataInput}
                 onChange={e => pdfDispatch({ type: 'SET_DATA_INPUT', value: e.target.value })}
                 onPaste={e => handlePaste(e)}
