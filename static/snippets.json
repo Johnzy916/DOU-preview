@@ -2,11 +2,7 @@
     "snippets": [
         {
             "shortcut": ".explain",
-            "text": "type the shortcut on the left into the Notes section. This is a preview version of the site and only includes example snippets."
-        },
-        {
-            "shortcut": ".sorry",
-            "text": "I’m very sorry, but fulfilling that request isn’t possible at this time. Let me check and see what I can do for you."
+            "text": "Type the shortcut on the left into the Notes section. This is a preview version of the site and only includes example snippets."
         },
         {
             "shortcut": ".intro",
@@ -31,6 +27,10 @@
         {
             "shortcut": ".account",
             "text": "Can you please give me your account number so I can look up your information?"
+        },
+        {
+            "shortcut": ".sorry",
+            "text": "I’m very sorry, but fulfilling that request isn’t possible at this time. Let me check and see what I can do for you."
         }
     ]
 }
