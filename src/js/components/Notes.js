@@ -31,6 +31,7 @@ export default function Notes() {
 
     // handle input changes
     const handleChange = (content, delta, source, editor) => {
+      console.log('editor: ', editor)
         notesDispatch({ 
             type: 'SET_NOTES_VALUE',
             notesValue: editor.getHTML()
