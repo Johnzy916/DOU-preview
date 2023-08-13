@@ -4,7 +4,10 @@ import { NotificationManager } from 'react-notifications';
 import { balanceText, demandSA, demandBill } from '../../fixtures/demandPreview';
 // dayjs
 import * as dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
 dayjs().format()
+// Extend dayjs with the customParseFormat plugin
+dayjs.extend(customParseFormat);
 
 export default function Rates() {
     // global state
@@ -101,10 +104,10 @@ export default function Rates() {
             || !prevBillSegInput.current.value) {
             return NotificationManager.warning('Provide all input data', 'Missing Info', 2000);
         }
-
+        
         // create DateTime from dates and push to demandInfo
-        const demandDate = dayjs(demandDateInput.current.value);
-        const lastBillDate = dayjs(lastBillDateInput.current.value);
+        const demandDate = dayjs(demandDateInput.current.value, 'MM-DD-YYYY');
+        const lastBillDate = dayjs(lastBillDateInput.current.value, 'MM-DD-YYYY');
         demandInfo['demandDate'] = demandDate.format('MM-DD-YYYY');
         demandInfo['lastBillDate'] = lastBillDate.format('MM-DD-YYYY');
 
@@ -164,8 +167,9 @@ export default function Rates() {
         // function for setting days since meter billed
         const setDaysSinceMeterBilled = (billedDate) => {
             // push meter date to state
+            const parsedBilledDate = dayjs(billedDate, 'MM-DD-YYYY');
             demandInfo['meterDate'] = billedDate
-            demandInfo['daysSinceMeterBilled'] = dayjs(demandDateInput.current.value).diff(billedDate, 'day');
+            demandInfo['daysSinceMeterBilled'] = dayjs(demandDateInput.current.value, 'MM-DD-YYYY').diff(parsedBilledDate, 'day');
         }
 
         // parse amounts from bill
