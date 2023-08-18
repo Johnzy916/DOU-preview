@@ -56,9 +56,44 @@ export default function Notes() {
     }, []);
 
     // get and set snippets
-    useEffect(async () => {
-      // static snippets
-      const snippets = await getStaticData('snippets.json', 'Unable to load snippets', 'Please reload the page');
+  useEffect(async () => {
+    // static snippets
+    const snippets = {
+      snippets: [
+      {
+        shortcut: ".explain",
+        text: "Type the shortcut on the left into the Notes section. This is a preview version of the site and only includes example snippets."
+      },
+      {
+        shortcut: ".intro",
+        text: "I hope you won’t mind that I keep a transcript of our conversation. It will be used for training purposes and quality assurance."
+      },
+      {
+        shortcut: ".contact",
+        text: "Would you like to leave me your contact information, so one of our customer success managers could reach out to you?"
+      },
+      {
+        shortcut: ".transfer",
+        text: "Is it okay if I transfer you to another department? They have a better understanding of the problem you are facing. I’m sorry for the inconvenience."
+      },
+      {
+        shortcut: ".hold",
+        text: "Can you please hold for a moment while I review the information you have provided? I’ll be right with you."
+      },
+      {
+        shortcut: ".thanks",
+        text: "Thank you for waiting. What can I do for you today?"
+      },
+      {
+        shortcut: ".account",
+        text: "Can you please give me your account number so I can look up your information?"
+      },
+      {
+        shortcut: ".sorry",
+        text: "I’m very sorry, but fulfilling that request isn’t possible at this time. Let me check and see what I can do for you."
+      }
+    ]};
+
       notesDispatch({ type: 'SET_SNIPPETS', snippets });
       // custom snippets
       const customSnippets = localStorage.getItem('dou_custom_snippets');

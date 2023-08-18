@@ -23,11 +23,30 @@ export default function Rates() {
 
     // get rates and set default prices
     useEffect(async () => {
-        const rates = await getStaticData(
-                'rates.json', 
-                'Unable to load rates',
-                'Please reload the page'
-            );
+        const rates = {
+            bwp: 36.41,
+            bwp_add: 8.91,
+            yw: 14.32,
+            yw_add: 4.65,
+            garbage96: 28.14,
+            garbage96_add: 23.76,
+            garbage64: 23.13,
+            garbage64_add: 20.12,
+            garbage32: 17.56,
+            garbage32_add: 17.37,
+            recycle: 7.45,
+            recycle_add: 2.57,
+            food_only: 10.02,
+            return96: 48.43,
+            return96_add: 25.61,
+            return64: 43.87,
+            return64_add: 22.37,
+            return32: 39.27,
+            return32_add: 20.12,
+            bags_5_6: 16.45,
+            bags_3_4: 12.80,
+            bags_1_2: 10.98
+        };
         ratesDispatch({ type: 'SET_RATES', rates });
         setBwpTotal(rates.bwp);
         setRsTotal({
